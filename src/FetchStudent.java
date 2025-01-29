@@ -14,7 +14,15 @@ public class FetchStudent {
 
             System.out.println("=========Student Information=============");
             while (resultSet.next()){
-                resultSet.toString();
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String classs = resultSet.getString("class");
+                int age = resultSet.getInt("age");
+                String classTeacher = resultSet.getString("classteacher");
+                Double mark = resultSet.getDouble("mark");
+
+                System.out.println("ID: "+id+"\nName: "+name+"\nClass: "+classs+"\nAge: "+age+"\nClass Teacher: "+classTeacher+"\nMarks: "+mark);
+                System.out.println("----------------------------------------------");
             }
 
         } catch (SQLException e) {

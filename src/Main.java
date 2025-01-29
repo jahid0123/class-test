@@ -17,7 +17,19 @@ public class Main {
 
         String insert = "insert into students(id, name, class, age, classteacher, mark) values(?, ?, ?, ?, ?, ?)";
         InsertStudent insertStudent = new InsertStudent();
-        insertStudent.insertStudents(students, insert);
+       // insertStudent.insertStudents(students, insert);
+
+        String fetchStudents1 = "select * from students";
+        FetchStudent fetchStudent0 = new FetchStudent();
+       fetchStudent0.fetchStudent(fetchStudents1);
+
+        String update = "update students set classteacher = 'Mizanur Rahman' where id = 5";
+        UpdateStudent updateStudent = new UpdateStudent();
+       // updateStudent.updateStudent(update);
+
+        String delete = "delete from students where id = 5";
+        DeleteStudent deleteStudent = new DeleteStudent();
+        //deleteStudent.deleteStudent(delete);
 
 
 
